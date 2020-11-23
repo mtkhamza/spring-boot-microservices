@@ -1,6 +1,6 @@
 # Microservices Architecture
 
 - Spring Boot RESTFUL web services
-- Netflix Eureka
-- Spring Cloud Gateway
+- Netflix Eureka Registry Service
+- Spring Cloud Gateway Service
 - Spring Boot Actuator
