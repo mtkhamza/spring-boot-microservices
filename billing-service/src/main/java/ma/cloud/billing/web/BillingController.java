@@ -16,8 +16,7 @@ public class BillingController {
     private Environment environment;
     @Autowired
     private CustomerRestClient customerRestClient;
-
-
+    
     @GetMapping("/")
     public String home(){
         return "Hello from Billing Service running at port: " + environment.getProperty("local.server.port");
