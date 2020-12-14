@@ -16,3 +16,6 @@ public class CustomerController {
         return "Hello from Customer Service running at port: " + environment.getProperty("local.server.port");
     }
 }
+
+
+

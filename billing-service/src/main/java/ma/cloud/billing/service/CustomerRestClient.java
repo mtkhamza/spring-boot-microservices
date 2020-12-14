@@ -3,7 +3,6 @@ package ma.cloud.billing.service;
 
 import ma.cloud.billing.model.Customer;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -13,3 +12,8 @@ public interface CustomerRestClient {
     @GetMapping(path = "/customers/{id}")
     public Customer getCustomerById(@PathVariable(name = "id") Long id);
 }
+
+
+
+
+

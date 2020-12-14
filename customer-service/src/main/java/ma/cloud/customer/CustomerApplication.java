@@ -27,3 +27,7 @@ public class CustomerApplication implements CommandLineRunner {
 		customerRepository.save(new Customer(null, "Anas", "anas@gmail.com"));
 	}
 }
+
+
+
+

@@ -6,4 +6,14 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 
 @RepositoryRestController
 public interface BillRepository  extends JpaRepository<Bill, Long> {
+
 }
+
+
+
+
+
+
+
+
+

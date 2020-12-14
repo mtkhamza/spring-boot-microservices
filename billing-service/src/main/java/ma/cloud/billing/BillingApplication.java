@@ -16,20 +16,21 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient
-public class BillingApplication implements CommandLineRunner {
+public class BillingApplication{
 
-
-		@Autowired
-		CustomerRestClient customerRestClient;
+		static CustomerRestClient customerRestClient;
+		public BillingApplication(CustomerRestClient customerRestClient){
+			BillingApplication.customerRestClient = customerRestClient;
+		}
 
 	public static void main(String[] args) {
 		SpringApplication.run(BillingApplication.class, args);
 		System.out.println("billing service is running");
-
-	}
-
-	@Override
-	public void run(String... args) throws Exception {
-
+		Customer customer = customerRestClient.getCustomerById(1L);
+		System.out.println(customer.getEmail());
+		System.out.println(customer.getName());
+		System.out.println(customer.getId());
 	}
 }
+
+

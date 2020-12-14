@@ -28,3 +28,6 @@ public class InventoryApplication implements CommandLineRunner {
 		productRepository.save(new Product(null,"Guitar",2500,2));
 	}
 }
+
+
+

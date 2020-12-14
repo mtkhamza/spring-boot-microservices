@@ -19,3 +19,10 @@ public class Bill {
     private Collection<ProductItem> productItem;
 
 }
+
+
+
+
+
+
+

@@ -1,7 +1,9 @@
 package ma.cloud.billing.web;
 
 import ma.cloud.billing.model.Customer;
+import ma.cloud.billing.model.Product;
 import ma.cloud.billing.service.CustomerRestClient;
+import ma.cloud.billing.service.ProductItemRestClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,8 @@ public class BillingController {
     private Environment environment;
     @Autowired
     private CustomerRestClient customerRestClient;
+    @Autowired
+    private ProductItemRestClient productItemRestClient;
     
     @GetMapping("/")
     public String home(){
@@ -26,4 +30,22 @@ public class BillingController {
     public Customer getCustomer(@PathVariable(name = "id") Long id){
         return customerRestClient.getCustomerById(id);
     }
+
+    @GetMapping("/products/{id}")
+    public Product getProduct(@PathVariable(name = "id") Long id){
+        return productItemRestClient.getProductItemById(id);
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

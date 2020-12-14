@@ -14,14 +14,18 @@ public class routesConfiguration {
     /*
             Static Configuration
     */
-
-    //@Bean
+//
+//    @Bean
 //    RouteLocator routeLocator(RouteLocatorBuilder routeLocatorBuilder) {
 //        return routeLocatorBuilder.routes()
 //                .route("r1", (r) -> r.path("/customers/**").uri("lb://CUSTOMER-SERVICE/"))
 //                .route("r2", (r) -> r.path("/products/**").uri("lb://INVENTORY-SERVICE/"))
 //                .build();
 //    }
+//
+
+
+
 
     /*
             Dynamic Configuration
@@ -31,6 +35,11 @@ public class routesConfiguration {
     DiscoveryClientRouteDefinitionLocator definitionLocator(ReactiveDiscoveryClient rdc, DiscoveryLocatorProperties properties) {
         return new DiscoveryClientRouteDefinitionLocator(rdc, properties);
     }
+
+
+
+
+
 
 
 }

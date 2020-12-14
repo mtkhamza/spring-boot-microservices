@@ -9,3 +9,10 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 public interface ProductItemRepository extends JpaRepository<ProductItem, Long> {
 
 }
+
+
+
+
+
+
+

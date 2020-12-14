@@ -16,3 +16,8 @@ public class ProductController {
         return "Hello from Product Service running at port: " + environment.getProperty("local.server.port");
     }
 }
+
+
+
+
+
