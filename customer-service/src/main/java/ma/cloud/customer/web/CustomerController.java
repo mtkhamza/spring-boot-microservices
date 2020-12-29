@@ -10,7 +10,6 @@ public class CustomerController {
     @Autowired
     private Environment environment;
 
-
     @GetMapping("/")
     public String home(){
         return "Hello from Customer Service running at port: " + environment.getProperty("local.server.port");

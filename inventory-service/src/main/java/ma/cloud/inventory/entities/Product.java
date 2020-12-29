@@ -19,4 +19,14 @@ public class Product {
     private String name;
     private double price;
     private double quantity;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }

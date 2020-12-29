@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -14,14 +15,17 @@ public class InventoryApplication implements CommandLineRunner {
 
 	@Autowired
 	ProductRepository productRepository;
+	@Autowired
+	RepositoryRestConfiguration repositoryRestConfiguration;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(InventoryApplication.class, args);
 	}
 
-
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args){
+		repositoryRestConfiguration.exposeIdsFor(Product.class);
 		productRepository.save(new Product(null,"Mouse",20,2));
 		productRepository.save(new Product(null,"Keyboard",30,3));
 		productRepository.save(new Product(null,"Printer",500,1));
