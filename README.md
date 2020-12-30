@@ -5,3 +5,4 @@
 - Spring Cloud Gateway Service (Dynamic Routing)
 - Spring Boot Actuator
 - Spring Cloud OpenFeign
+- JWT Authorization & Authentication
