@@ -6,15 +6,16 @@ import lombok.NoArgsConstructor;
 import ma.cloud.billing.model.Customer;
 
 import javax.persistence.*;
-
 import java.util.Collection;
 import java.util.Date;
 
 @Entity
 @Data
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class Bill {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date billingDate;
     @OneToMany(mappedBy = "bill")
@@ -22,12 +23,4 @@ public class Bill {
     @Transient
     private Customer customer;
     private long customerId;
-
 }
-
-
-
-
-
-
-

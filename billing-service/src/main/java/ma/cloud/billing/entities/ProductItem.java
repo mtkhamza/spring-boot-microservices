@@ -10,9 +10,11 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductItem {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double quantity;
     private double price;
@@ -22,9 +24,5 @@ public class ProductItem {
     private Bill bill;
     @Transient
     private Product product;
+
 }
-
-
-
-
-
