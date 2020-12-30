@@ -6,3 +6,4 @@
 - Spring Boot Actuator
 - Spring Cloud OpenFeign
 - JWT Authorization & Authentication
+- Hystrix Circuit Breaker 
